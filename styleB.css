@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    cursor: default;
+    
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background:rgba(0, 0, 0, 0.742) url(bmi.png);
+    background-size: cover;
+    background-position:center ;
+    background-blend-mode: darken;
+}
+.appearance-part{
+    width: 70vw;
+    height: 100vh;
+}
+#photo-frame{
+    border: 2px solid rgba(252, 252, 252, 0.82);
+    height: 90vh;
+    margin: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+#show{
+    font-size: 3vw;
+    color: aquamarine;
+    position: absolute;
+}
+#images{
+    height: 50vh;
+    filter: drop-shadow(0px 10px 10px grey);
+    animation: move 3s infinite;
+}
+/* @keyframes move {
+    50%{
+        transform: rotateY(89deg);
+    }
+    
+} */
+#reload{
+    display: none;
+}
+
+
+
+
+
+/* -------------------- */
+.action-part{
+    width: 30vw;
+    height: 100vh;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px dotted rgba(252, 252, 252, 0.82);
+}
+#bmi-heading{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-size: 3.8vw;
+    font-family: 'Oleo Script', cursive;
+    font-weight: 500;
+}
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+#gender{
+    font-size: 2.3vw;
+}
+#gender-choice{
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5vw;
+}
+.number-input{
+    font-size: 1.6vw;
+    background-color: transparent;
+    border: none;
+    width: 20vw;
+    height: 6vh;
+    padding: 1vw;
+    border: 2px solid rgba(252, 252, 252, 0.82);
+    border-radius: 5px;
+    cursor: text;
+}
+input::placeholder{
+    color: rgba(252, 252, 252, 0.82);
+}
+
+/* this is for diable the increading or 
+decreasing arrow from input text is number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.gender{
+    border: 1.5px solid rgba(252, 252, 252, 0.82);
+    padding: 2px;
+    width: 7vw;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+#enter-height,#enter-weight{
+    margin: 5px 0px;
+    font-size: 2vw;
+}
+#rButton{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin: 10px 0px;
+}
+#result,#reload{
+    background-color:rgba(0, 225, 255, 0.89);
+    cursor: pointer;
+    border: none;
+    padding: 0.1vw 0.5vw;
+    font-size: 1.8vw;
+}
+#result-box{
+    border: 2px solid rgba(252, 252, 252, 0.82);
+    border-radius: 5px;
+    height: 15vw;
+    padding: 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    font-size: 1.6vw;
+}
+#final-result{
+    margin-top: 1vw;
+}
+#bmi-span{
+    color: aquamarine;
+}
+
+
+
+
+
+/* media queries for resposiveness */
+
+/* mobile responsiveness */
+ 
+@media screen and (max-width:687px) {
+    body::-webkit-scrollbar{
+        /* overflow-x: hidden; */
+        display: none;
+    }
+    .wrapper{
+        display: flex;
+        height: 160vh;
+        flex-direction: column;
+        
+    }
+    
+    .action-part{
+        width: 100vw;
+        height: 100vh;
+        order: 1;
+        border: none;
+        
+    }
+    #bmi-heading{
+        font-size: 13vw;
+    }
+    #gender{
+        font-size: 8vw;
+    }
+    .gender{
+        padding: 0.2vw;
+        width: 20vw;
+        height: 3vh;
+        font-size: 4.5vw;
+    }
+    #enter-height,#enter-weight{
+        margin: 15px 0px;
+        font-size: 8vw;
+    }
+    .number-input{
+        font-size: 5vw;
+        width: 70vw;
+        height: 5vh;
+        padding-left: 3vw;
+    }
+    #rButton{
+        gap: 2vw;
+        margin: 3vh 0px;
+    }
+    #result,#reload{
+        padding: 0.1vw 2vw;
+        font-size: 7vw;
+    }
+    #result-box{
+        font-size: 7vw;
+        height: 35vw;
+        padding: 3px 8px;
+    }
+    /* appearance */
+
+    .appearance-part{
+        width: 100vw;
+        height: 100vh;
+        order: 2;
+    }
+    #show{
+        font-size: 6vw;
+        position: absolute;
+        bottom: 10vh;
+    }
+    #photo-frame{
+        height: 70vh;
+    }
+    
+}
+
+/* for big screen responsiveness */
+
+@media screen and (min-height:1023px) {
+    body::-webkit-scrollbar{
+        /* overflow-x: hidden; */
+        display: none;
+    }
+    .wrapper{
+        display: flex;
+        height: 200vh;
+        flex-direction: column;
+        gap: 15vh;
+        
+    }
+    
+    .action-part{
+        width: 100vw;
+        height: 100vh;
+        order: 1;
+        border: none;
+        
+    }
+    #bmi-heading{
+        font-size: 13vw;
+    }
+    #gender{
+        font-size: 8vw;
+    }
+    .gender{
+        padding: 0.2vw;
+        width: 25vw;
+        height: 6vh;
+        font-size: 6vw;
+    }
+    #enter-height,#enter-weight{
+        margin: 15px 0px;
+        font-size: 8vw;
+    }
+    .number-input{
+        font-size: 6vw;
+        width: 70vw;
+        height: 8vh;
+        padding-left: 3vw;
+    }
+    #rButton{
+        gap: 2vw;
+        margin: 3vh 0px;
+    }
+    #result,#reload{
+        padding: 0.1vw 2vw;
+        font-size: 7vw;
+    }
+    #result-box{
+        font-size: 7vw;
+        height: 35vw;
+        padding: 3px 8px;
+    }
+    /* appearance */
+
+    .appearance-part{
+        width: 100vw;
+        height: 100vh;
+        order: 2;
+    }
+    #show{
+        font-size: 6vw;
+        position: absolute;
+        bottom: -28vh;
+    }
+    #photo-frame{
+        height: 75vh;
+    }
+    
+}
+

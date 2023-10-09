@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calcultor</title>
+    <link rel="stylesheet" href="styleB.css">
+    <link rel="icon" href="scale.png">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="appearance-part">
+            <div id="photo-frame">
+                <img src="" alt="" id="images">
+                <p id="show">Your Appearance look here</p>
+                <button id="reload">Check other</button>
+            </div>
+        </div>
+        <div class="action-part">
+            <h1 id="bmi-heading">Check Your BMI</h1>
+            <div id="remain-part">
+            <div id="gender">Choice Your Gender</div>
+            <div id="gender-choice">
+                <div class="gender male" id="male" onclick="gender1()"><input type="radio" name="gender">Male</div>
+                <div class="gender female" id="female" onclick="gender2()"><input type="radio" name="gender">Female</div>
+            </div>
+            <div id="enter-height">Enter your height</div>
+            <div id="height"><input type="number" placeholder="Height ( in metre )" class="number-input ht"></div>
+            <div id="enter-weight">Enter your weight</div>
+            <div id="weight"><input type="number" placeholder="Weight ( in KG )" class="number-input mass" ></div>            
+            <div id="rButton">
+                <button id="result">Result</button>
+                
+            </div>
+            <div id="result-box">
+                <div id="final-result">Your BMI is </div>
+                <span id="bmi-span">here</span>
+                <div id="types-of-person"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="indexB.js"></script>
+</body>
+</html>
