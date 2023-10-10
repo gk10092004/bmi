@@ -167,7 +167,7 @@ input::-webkit-inner-spin-button{
     }
     .wrapper{
         display: flex;
-        height: 160vh;
+        height: 170vh;
         flex-direction: column;
         
     }
@@ -188,7 +188,7 @@ input::-webkit-inner-spin-button{
     .gender{
         padding: 0.2vw;
         width: 20vw;
-        height: 3vh;
+        height: 4vh;
         font-size: 4.5vw;
     }
     #enter-height,#enter-weight{
@@ -224,7 +224,7 @@ input::-webkit-inner-spin-button{
     #show{
         font-size: 6vw;
         position: absolute;
-        bottom: 10vh;
+        bottom: 0vh;
     }
     #photo-frame{
         height: 70vh;
